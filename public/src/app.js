@@ -4,10 +4,12 @@ import App from './components/App.js';
 import {AppContainer} from 'react-hot-loader';
 
 //redux
-import {creatStore, applyMiddleware, compose} from 'redux';
+import {createStore, applyMiddleware, compose} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import reducer from './reducer';
+
+import Master from './styles/Master.scss';
 
 const store = createStore(reducer, compose(
     applyMiddleware(thunk),

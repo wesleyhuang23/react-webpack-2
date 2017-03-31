@@ -5,7 +5,7 @@ export default class App extends React.Component{
         return (
             <div className="container">
                 <div className="row">
-                    Hello World!
+                    Welcome to the React-Redux Boilerplate
                 </div>
             </div>
         )
