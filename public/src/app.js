@@ -11,10 +11,14 @@ import reducer from './reducer';
 
 import Master from './styles/Master.scss';
 
-const store = createStore(reducer, compose(
-    applyMiddleware(thunk),
-    window.devToolsExtension ? window.devToolsExtensions() : f => f
-));
+// const store = createStore(reducer, compose(
+//     applyMiddleware(thunk),
+//     window.devToolsExtension ? window.devToolsExtensions() : f => f
+// ));
+
+store.subscribe(() => {
+    console.log("store changed", store.getState()) //loging when state has changed
+})
 
 require('./index.html');
 

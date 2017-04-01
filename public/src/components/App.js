@@ -5,7 +5,7 @@ export default class App extends React.Component{
         return (
             <div className="container">
                 <div className="row">
-                    Welcome to the React-Redux Boilerplate
+                    Welcome to the React-Webpack Boilerplate 2.0
                 </div>
             </div>
         )
