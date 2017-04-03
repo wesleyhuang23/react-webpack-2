@@ -1,3 +1,4 @@
+//react
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App.js';
@@ -9,16 +10,8 @@ import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import reducer from './reducer';
 
+//styles
 import Master from './styles/Master.scss';
-
-// const store = createStore(reducer, compose(
-//     applyMiddleware(thunk),
-//     window.devToolsExtension ? window.devToolsExtensions() : f => f
-// ));
-
-store.subscribe(() => {
-    console.log("store changed", store.getState()) //loging when state has changed
-})
 
 require('./index.html');
 
@@ -33,9 +26,9 @@ if(module.hot){
     module.hot.accept('./components/App.js', () => {
         ReactDOM.render(
             <AppContainer>
-            <Provider store={store}>
-                <App />
-            </Provider>
+                <Provider store={store}>
+                    <App />
+                </Provider>
             </AppContainer>,
             document.getElementById('app-container')
         );
